@@ -131,7 +131,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git tag -fa nightly -m "Nightly build ${VERSION}"
-          git push origin nightly
+          git push -f origin nightly
 
           # Collect release artifacts from goreleaser dist/
           ASSETS=()
